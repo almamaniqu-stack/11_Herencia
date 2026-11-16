@@ -17,16 +17,16 @@ class vehiculo{
 		string getIdentificador();
 		string getPlaca();
 		string getMarca();
-		string setIdentificador(string IDN);
-		string setPlaca(string P);
-		string setMarca(string M);
-		string Disponibilidad(int D);
+		void setIdentificador(string IDN);
+		void setPlaca(string P);
+		void setMarca(string M);
+		string Disponibilidad(int D[3]);
 		string Reservar();
 		string CancelarReserva();
 };
 
 void vehiculo :: ConsultarDatos(){
-	cout << "Codigo de Indentificacion: " cout << identificador << endl;
+	cout << "Codigo de Indentificacion: " << identificador << endl;
 	cout << "Numero de placa: " << placa << endl;
 	cout << "Marca del vehiculo: " << marca << endl;
 	cout << "Estado de reserva: " << estado << endl;
@@ -44,9 +44,27 @@ string vehiculo :: getMarca(){
 	return marca;
 }
 
-string vehiculo :: setIdentificador(string IDN){
+void vehiculo :: setIdentificador(string IDN){
 	identificador = IDN;
 }
+
+void vehiculo :: setPlaca(string P){
+	placa = P;
+}
+
+void vehiculo :: setMarca(string M){
+	marca = M;
+}
+
+string vehiculo :: Disponibilidad(int D[3]){
+	if(D[0] <= 0 || D[1] <= 0 || D[3] <= 0){
+		estado = "No Disponible";
+	}
+	if()
+	return estado;
+}
+
+
 
 int main(){
 	
