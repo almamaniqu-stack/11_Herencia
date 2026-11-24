@@ -133,7 +133,7 @@ class Terrestre : public vehiculo{
 		void setMarca1(string Ma);
 		void ListaVehiculosDisponibles(int D[]);
 		void Reservar();
-		void CancelarReserva(string R);
+		void CancelarReserva(string Rk);
 };
 
 int main(){
